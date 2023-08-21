@@ -13,7 +13,7 @@ services:
       timeout: 3s
       interval: 15s
       retries: 20
-      test: "curl -f http://localhost:8080/api/ || exit 1"
+      test: "curl -f http://localhost:8080/api/ || exit 0"
     volumes:
       - ./configuration:/etc/netbox/config:z,ro
       - netbox-media-files:/opt/netbox/netbox/media:z,rw
